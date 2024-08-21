@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Bank Of Baroda KYC</string>
+    <string name="title_activity_main">Bank Of Baroda KYC</string>
+    <string name="package_name">com.bankofbaroda.nc.in</string>
+    <string name="custom_url_scheme">com.bankofbaroda.nc.in</string>
+</resources>

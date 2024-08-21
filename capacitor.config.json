@@ -1,0 +1,8 @@
+{
+  "appId": "com.bankofbaroda.nc.in",
+  "appName": "Bank Of Baroda KYC",
+  "webDir": "out",
+  "server":{
+    "androidScheme": "https"
+  }
+}
