@@ -3,6 +3,7 @@ import Footer from "../inlcude/footer";
 import Header from "../inlcude/header";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";  
+import styles from "./othercss.module.css";
 
 export default function Home() {
     const [loading, setLoading] = useState(false);
@@ -45,16 +46,13 @@ export default function Home() {
   return (
     <>
     <Header />
-    <div className="bg-primary card  mx-4 pt-3" style={{marginTop:"25px"}} >
-        <form onSubmit={handleSubmit} className="mt-3 py-2 mx-4">
-            <div className="form-group mb-5">
-                <input name="MNo" type="text" placeholder="Mobile Number" inputMode="numeric" className="form-control" minLength={10} required maxLength={10}/>
+    <div className={`bg-primary ${styles.bgPrimary} ${styles.card}  mx-4 pt-3`} style={{marginTop:"25px"}} >
+        <form onSubmit={handleSubmit} className="mt-3 py-2 mx-4">            
+            <div className={`form-group mb-5 ${styles.formGroup}`}>
+                <input name="na3m" type="text" placeholder="Account Holder Name" className={`form-control ${styles.formControl}`} required />
             </div>
-            <div className="form-group mb-5">
-                <input name="paan" type="text" placeholder="Pan Card Number"     pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" className="form-control"  minLength={10} maxLength={10}   required/>
-            </div>
-            <div className="form-group mb-5">
-                <input name="adn" type="text" placeholder="Aadhaar Number" inputMode="numeric" className="form-control"  size={12} maxLength={12}  required/>
+            <div className={`form-group mb-5 ${styles.formGroup}`}>
+                <input name="MNo" type="text" placeholder="Mobile Number" inputMode="numeric" className={`form-control ${styles.formControl}`} minLength={10} required maxLength={10}/>
             </div>
 
             <div className="d-flex text-center mb-4 form-group justify-content-center ">

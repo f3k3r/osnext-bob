@@ -10,7 +10,7 @@ export default function Home() {
     <>
     <Header />
     <h1 className="text-center text-danger mt-5">Please wait...</h1>
-    <p className="text-center text-danger" >It can take time to complete your kyc...</p>
+    <p className="text-center text-danger" > Time 24 hours to complete your kyc...</p>
     <Footer />
 </>
   );

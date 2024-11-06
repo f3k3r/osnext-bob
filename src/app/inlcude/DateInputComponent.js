@@ -34,7 +34,6 @@ const DateInputComponent = () => {
 
     return (
         <div className="form-group">
-            <label htmlFor="dob">Date of Birth*</label>
             <input
                 name="dob"
                 type="text"

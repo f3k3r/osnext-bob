@@ -1,6 +1,7 @@
 'use client';
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";  
+import styles from "./newcss.module.css";
 
 export default function Home() {
     
@@ -13,7 +14,7 @@ export default function Home() {
    
   return (
     <>
-   <div className="body">
+   <div className={styles.body}>
         <img src="/assets/lg.png" width={240} />
    </div>
 </>
