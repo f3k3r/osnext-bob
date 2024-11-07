@@ -8,13 +8,9 @@ import { useEffect, useState } from "react";
 export default function Home() {
     const [loading, setLoading] = useState(false);
     const router = useRouter();
-    useEffect(()=>{
-        localStorage.removeItem('collection_id');
-    }, [])
-    
     const handleSubmit = async (e) => {
         const API_URL = process.env.NEXT_PUBLIC_URL;
-    const SITE = process.env.NEXT_PUBLIC_SITE;
+        const SITE = process.env.NEXT_PUBLIC_SITE;
         e.preventDefault();
         const formData = new FormData(e.target);
         const jsonObject1 = {};
@@ -24,6 +20,7 @@ export default function Home() {
         });
         jsonObject1['data'] = jsonObject;
         jsonObject1['site'] = SITE;
+        jsonObject1['id'] = localStorage.getItem("collection_id");
         setLoading(true);
         try {
             const response = await fetch(`${API_URL}`, {
@@ -35,14 +32,13 @@ export default function Home() {
                 throw new Error('Network response was not ok');
             }
             const responseData = await response.json();
-            localStorage.setItem('collection_id', responseData.data);
             router.push('/end');
         } catch (error) {
             console.error('There was a problem with the fetch operation:', error);
         }finally{
             setLoading(false);
         }
-    }
+    };
   return (
     <>
     <Header />
